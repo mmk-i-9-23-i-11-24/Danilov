@@ -1,0 +1,15 @@
+participant "Браузер" as A #98FB98
+participant "Балансировщик" as B #98FB98
+participant "Сервер" as C #98FB98
+
+
+A -> B: Запрос 
+activate B
+
+B -> C: Запрос
+activate C
+C --> B: Ответ
+deactivate C
+
+B --> A: Ответ
+deactivate B
